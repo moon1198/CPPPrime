@@ -1,0 +1,1 @@
+int plus_by_step(int);
