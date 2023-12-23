@@ -1,4 +1,5 @@
 #include <sstream>
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -17,7 +18,17 @@ TextQuery::TextQuery(ifstream &infile) : file(new std::vector<std::string>) {
         istringstream iss(line);
         string word;
         while(iss >> word) {
-            wm[word]->insert(n);
+
+            //error implement ;
+            //wm[word]->insert(n);
+
+            shared_ptr<set<line_no>> &indexs = wm[word];
+            //auto indexs = wm[word];
+            //if indexs is equal to  nullptr
+            if (!indexs) {
+                indexs.reset(new set<line_no>);
+            }
+            indexs->insert(n);
         }
     }
 }
@@ -28,6 +39,7 @@ QueryResult TextQuery::query(const string s) const {
     if (sit == wm.end()) {
         return QueryResult(s, nodata, file);
     }else {
+        // cout << s << " has been found" << endl;
         return QueryResult(s, sit->second, file);
     }
 }
