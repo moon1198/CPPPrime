@@ -30,6 +30,15 @@ int main () {
                     cout << "Command <" << instr << "> has't been implemented" << endl;
                 }
         }
+        switch(instr) {
+            case 1: //m_add()
+            case 3: //m_del()
+            case 4: //m_modify()
+            case 6: //m_sort()
+            case 7: //m_clear()
+            plat.update_file();
+            default : break;
+        }
     }
 
     return 0;

@@ -1,4 +1,0 @@
-0  zhang  Boss
-1  li  Manager
-2  wang  Manager
-3  jiang  Boss

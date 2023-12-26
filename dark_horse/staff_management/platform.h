@@ -16,12 +16,16 @@ public:
     void m_display();
     void m_del();
     void m_modify();
-    void m_find();
+    vector<shared_ptr<Worker>>::iterator m_find();
+    void m_search();
     void m_sort();
     void m_clear(); 
+    void update_file();
 private:
     shared_ptr<vector<shared_ptr<Worker>>> data_area;
     size_t num;
+    vector<shared_ptr<Worker>>::iterator id_find(int index_id);
+    vector<shared_ptr<Worker>>::iterator name_find(string index_name);
 };
 
 #endif
