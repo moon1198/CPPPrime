@@ -12,6 +12,7 @@ public:
     string m_name;
     int m_id;
     int m_score[2];
+    void showInfo();
 
 private:
 

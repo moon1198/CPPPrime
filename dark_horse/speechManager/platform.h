@@ -12,8 +12,10 @@ public:
     // Platform() = default;
     // Platform(,);
     void showMenu();
-    void exitPlat();
     void startSpeech();
+    void display();
+    void clearRecord();
+    void exitPlat();
 
 private:
     vector<int> v1;
@@ -22,9 +24,14 @@ private:
 
     map<int ,shared_ptr<Speaker>> mp_speaker;
     int m_index;
+    int m_Record;
 
     void creatSpeakers();
     void showStatus();
+    void speechDraw();
+    void speechContest();
+    void speechResult();
+    void storeRecord();
 
 
 };

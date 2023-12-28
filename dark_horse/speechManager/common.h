@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
 #include <cstdlib>
+#include <windows.h>
 
 #include "platform.h"
 
