@@ -9,7 +9,7 @@ class WordQuery : public Query_base{
     WordQuery(const string &s);
 
     virtual QueryResult eval(TextQuery &t)const;
-    virtual string rep();
+    virtual string rep() const;
     const string word;
 
 };

@@ -11,7 +11,7 @@ public:
 
 protected:
     virtual QueryResult eval(TextQuery &t) const = 0;
-    virtual string rep() = 0;
+    virtual string rep() const = 0;
 };
 
 #endif

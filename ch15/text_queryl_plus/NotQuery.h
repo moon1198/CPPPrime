@@ -14,9 +14,7 @@ class NotQuery : public Query_base{
 
     QueryResult eval(TextQuery &t) const;
 
-    string rep() {
-        return "";
-    }
+    string rep() const;
 
     Query query;
 

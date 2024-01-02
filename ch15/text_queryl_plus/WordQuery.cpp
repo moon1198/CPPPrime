@@ -10,6 +10,6 @@ QueryResult WordQuery::eval(TextQuery &t) const{
     return t.query(word);
 }
 
-string WordQuery::rep() {
-    return "";
+string WordQuery::rep() const {
+    return "\"" + word + "\"";
 }

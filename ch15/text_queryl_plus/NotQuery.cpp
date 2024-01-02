@@ -20,5 +20,9 @@ QueryResult NotQuery::eval(TextQuery &t) const{
             beg ++;
         }
     }
-    return QueryResult("hello", ret_lines, t.get_file());
+    return QueryResult(rep(), ret_lines, t.get_file());
+}
+
+string NotQuery::rep() const {
+    return "~" + query.rep();
 }

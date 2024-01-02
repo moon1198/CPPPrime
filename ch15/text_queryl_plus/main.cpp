@@ -13,8 +13,12 @@ int main() {
     // }
 
     TextQuery tq(infile);
-    string s =  "mean";
-    Query qu = ~Query(s);
+    string s1 =  "mean";
+    string s2 = "bird";
+    string s3 = "in";
+    // Query qu = Query(s1) | (Query(s2) & Query("in"));
+    Query qu = ~(s1 | (s2 & s3));
+    // Query qu = ~s1;
     QueryResult res = qu.eval(tq);
     print(cout, res);
 

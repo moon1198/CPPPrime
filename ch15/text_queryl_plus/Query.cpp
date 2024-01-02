@@ -11,6 +11,6 @@ QueryResult Query::eval(TextQuery &t) const{
     return q->eval(t);
 }
 
-string Query::rep() {
-    return "";
+string Query::rep() const {
+    return q->rep();
 }

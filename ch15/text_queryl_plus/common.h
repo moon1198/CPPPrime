@@ -13,5 +13,7 @@ using namespace std;
 #include "Query.h"
 #include "Query_base.h"
 #include "NotQuery.h"
+#include "AndQuery.h"
+#include "OrQuery.h"
 #include "WordQuery.h"
 void print(ostream &out, const QueryResult &text);
